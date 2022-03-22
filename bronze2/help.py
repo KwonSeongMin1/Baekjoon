@@ -1,4 +1,3 @@
-a = 12
-b = "12"
-if b[0] in str(a):
-    print("hello")
+C = 5
+c = [0 for i in range(C+1)]
+print(c)
