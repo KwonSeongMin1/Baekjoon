@@ -1,3 +1,5 @@
-C = 5
-c = [0 for i in range(C+1)]
-print(c)
+from operator import not_
+
+for i in range(3):
+    num = list(int,input())
+print(num)
