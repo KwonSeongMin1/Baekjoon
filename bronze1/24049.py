@@ -7,7 +7,14 @@ num_list = list(map(int,input().split()))
 for i in range(N):
     flower[i+1][0] = num_list[i]
 num_list = list(map(int, input().split()))
-for i in range(N):
+for i in range(M):
     flower[0][i+1] = num_list[i]
     
-print(flower)
+for j in range(N):
+    for k in range(M):
+        if flower[j][k+1] == flower[j+1][k]:
+            flower[j+1][k+1] = 0
+        else:
+            flower[j+1][k+1] = 1
+            
+print(flower[N][M])
