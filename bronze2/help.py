@@ -1,8 +1,19 @@
-a = [1,2,3,4,5]
-size = len(a)-1
-for i in range(100):
-    if size == -1:
-        size = len(a)-1
-    print(a[size])
-    size -= 1
-    
+x, y = map(int, input().split())
+if x < y:
+    (x, y) = (y, x)
+# 유클리드 호재법
+
+
+def gcd(x, y):
+    while(x % y != 0):
+        (x, y) = (y, (x % y))
+    return y
+# 최소 공배수 = 두 수의 곱 / 최대 공약수
+
+
+def lcm(x, y):
+    return int((x * y) / gcd(x, y))
+
+
+print(gcd(x, y))
+print(lcm(x, y))
